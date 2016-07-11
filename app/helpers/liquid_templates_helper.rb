@@ -1,0 +1,2 @@
+module LiquidTemplatesHelper
+end

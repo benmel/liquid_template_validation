@@ -1,0 +1,21 @@
+%h1 Listing liquid_templates
+
+%table
+  %thead
+    %tr
+      %th Content
+      %th
+      %th
+      %th
+
+  %tbody
+    - @liquid_templates.each do |liquid_template|
+      %tr
+        %td= liquid_template.content
+        %td= link_to 'Show', liquid_template
+        %td= link_to 'Edit', edit_liquid_template_path(liquid_template)
+        %td= link_to 'Destroy', liquid_template, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Liquid template', new_liquid_template_path

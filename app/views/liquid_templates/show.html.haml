@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Content:
+  = @liquid_template.content
+
+= link_to 'Edit', edit_liquid_template_path(@liquid_template)
+\|
+= link_to 'Back', liquid_templates_path
